@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"build": "tsc -p ./src | node ./node_modules/webpack/bin/webpack.js",
-	"serve": "lite-server -c=bs-config.json",
-	"prestart": "npm run build",
-	"start": "npm run build | npm run serve"
+    "build": "tsc -p ./src | node ./node_modules/webpack/bin/webpack.js",
+    "serve": "lite-server -c=bs-config.json",
+    "prestart": "npm run build",
+    "start": "npm run build | npm run serve"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "zone.js": "^0.8.5"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "lite-server": "^2.3.0",
     "ts-loader": "^2.0.3",
     "typescript": "^2.2.2",

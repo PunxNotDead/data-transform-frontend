@@ -10,9 +10,9 @@
 			"es6",
 			"dom"
 		],
-		"outDir": "dist"
+		"outDir": "./build"
 	},
 	"exclude": [
-		"../node_modules"
+		"./node_modules"
 	]
 }
