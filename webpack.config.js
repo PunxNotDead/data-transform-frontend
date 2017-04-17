@@ -14,17 +14,23 @@ module.exports = {
 	},
 
 	module: {
-		loaders: [
-			{
-				test: /\.ts?$/,
-				exclude: /node_modules/,
-				loaders: ["ts-loader"]
-			}
-		]
+		loaders: [{
+			test: /\.ts?$/,
+			exclude: /node_modules/,
+			loaders: ["ts-loader"]
+		},
+		{
+			test: /\.less$/,
+			loader: "style!css!less"
+		}]
 	},
 	plugins: [
-        new CopyWebpackPlugin([
-            { from: 'src/index.html', to: path.resolve(__dirname, 'dist', 'index.html') }
-		])
+		new CopyWebpackPlugin([{
+			from: path.resolve(__dirname, 'src', 'index.html'),
+			to: path.resolve(__dirname, 'dist', 'index.html')
+		}, {
+			from: path.resolve(__dirname, 'src', 'templates'),
+			to: path.resolve(__dirname, 'dist', 'templates')
+		}])
 	]
 };

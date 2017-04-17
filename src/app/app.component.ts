@@ -2,8 +2,14 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "app",
-  template: `Hello World!`
+	selector: "app",
+	templateUrl: '/templates/app.html'
 })
 
-export class AppComponent { }
+class AppComponent {
+	buttonClick(event) {
+		console.log(event);
+	}
+}
+
+export default AppComponent;
