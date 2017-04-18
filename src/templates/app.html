@@ -1,7 +1,7 @@
-<div class="content">
+<div class="content" (mousedown)="startDraw($event)" (mouseup)="endDraw($event)" (mousemove)="drawLine($event)">
 	Hello component
 
 	<button (click)="buttonClick($event)">Start draw</button>
 
-	<zLine [x1]=100 [y1]=100 [x2]=300 [y2]=300></zLine>
+	<zLine [x1]="x1" [y1]="y1" [x2]="x2" [y2]="y2"></zLine>
 </div>
